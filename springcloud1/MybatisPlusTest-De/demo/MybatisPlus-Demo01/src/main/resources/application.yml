@@ -1,0 +1,18 @@
+server:
+  port: 8300
+spring:
+  datasource:
+    #数据源基本信息，也可放在druid下
+    url: jdbc:mysql://127.0.0.1:3306/myapp?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+# Logger Config
+#引入 MybatisPLUS 日志配置
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*.xml
+  type-aliases-package: com.example.mybatisplusdemo01.domain
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
